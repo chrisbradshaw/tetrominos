@@ -13,10 +13,11 @@ let Banner = ({ label, color, opacity, dispatch }) => {
     position: 'absolute',
     top: '0px',
   };
+
   return (
     <div style={banner}>
       <h1 style={{ paddingTop: '250px', color }}>{label}</h1>
-      {label === 'GAME_OVER' ? (
+      {label === 'GAME OVER' ? (
         <MuiThemeProvider>
           <RaisedButton
             label="New Game"

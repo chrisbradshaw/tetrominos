@@ -21,7 +21,7 @@ let GameField = ({ isPlaying, isPaused, isGameOver }) => {
             </Layer>
           </Stage>
           {isPaused ? (
-            <Banner label="PAUSED" color="black" opacity=".5" />
+            <Banner label="PAUSED" color="white" opacity=".5" />
           ) : null}
         </div>
         {isGameOver ? (

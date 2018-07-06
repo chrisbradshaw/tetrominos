@@ -13,7 +13,7 @@ const store = createStore(TetrisApp, applyMiddleware(ReduxThunk));
 
 const App = () => (
   <Provider store={store}>
-    <div>
+    <div className="game-wrapper">
       <TetrisGame />
     </div>
   </Provider>

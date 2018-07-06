@@ -3,12 +3,11 @@
 body {
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  background-color: #cfd8dc;
 }
 
 .pageBanner {
   margin-top: 10px;
-  font-size: 30px;
-  letter-spacing: 20px;
 }
 
 .menuButton {
@@ -44,8 +43,12 @@ body {
   width: 300;
   height: 660;
   display: inline-block;
-  background-color: #5bd7d5;
+  background-color: #f5f5f5;
   position: relative;
+  margin: 10px;
+  border-collapse: collapse;
+  -webkit-box-shadow: -5px 5px 15px #607d8b;
+  box-shadow: -5px 5px 15px #607d8b;
 }
 
 .nextTetromino {

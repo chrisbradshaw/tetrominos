@@ -10,5 +10,4 @@ const mapStateToProps = ({ nextTetromino }) => ({
 });
 
 const NextTetromino = connect(mapStateToProps)(Tetromino);
-
 export default NextTetromino;

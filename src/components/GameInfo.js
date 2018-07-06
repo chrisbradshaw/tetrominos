@@ -1,5 +1,5 @@
-import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Layer, Stage } from 'react-konva';
 import style from '../styles/styles.css';
@@ -20,7 +20,7 @@ let GameInfo = ({
   };
   if (isPlaying) {
     return (
-      <div className={style.gameInfo}>
+      <div className="gameInfo">
         <RaisedButton
           label={isPaused ? 'UNPAUSE' : 'PAUSE'}
           style={buttonStyle}
@@ -28,7 +28,7 @@ let GameInfo = ({
           onClick={() => dispatch(changePauseState())}
           disabled={isGameOver}
         />
-        <div className={style.scorePanel}>
+        <div className="scorePanel">
           <h2>Next Shape</h2>
           <Stage width={250} height={100}>
             <Layer>
@@ -36,11 +36,11 @@ let GameInfo = ({
             </Layer>
           </Stage>
         </div>
-        <div className={style.scorePanel}>
+        <div className="scorePanel">
           <h2>Score</h2>
-          <space className={style.scoreInfo}>{points}</space>
+          <span className="scoreInfo">{points}</span>
           <h2>Lines</h2>
-          <span className={style.scoreInfo}>{clearedLines}</span>
+          <span className="scoreInfo">{clearedLines}</span>
         </div>
       </div>
     );
@@ -55,4 +55,5 @@ const mapStateToProps = ({ gameStatus }) => ({
 });
 
 GameInfo = connect(mapStateToProps)(GameInfo);
+
 export default GameInfo;

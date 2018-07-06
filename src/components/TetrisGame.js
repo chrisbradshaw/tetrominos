@@ -1,10 +1,10 @@
-import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import React from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import GameField from './GameField';
-import gameConstants from '../gameConstants';
-import MenuContainer from '../containers/MenuContainer';
-import CurrentGameInfo from '../containers/CurrentGameInfo';
+import GameField from './GameField.js';
+import gameConstants from '../gameConstants.js';
+import MenuContainer from '../containers/MenuContainer.js';
+import CurrentGameInfo from '../containers/CurrentGameInfo.js';
 
 injectTapEventPlugin();
 
@@ -21,7 +21,7 @@ const TetrisGame = () => (
         <CurrentGameInfo />
       </MuiThemeProvider>
     </div>
-  </div>;
+  </div>
 );
 
 export default TetrisGame;

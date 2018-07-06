@@ -2,8 +2,8 @@ import React from 'react';
 import { Layer, Stage } from 'react-konva';
 import { connect } from 'react-redux';
 import Banner from './Banner.js';
-import CurrentTetromino from '../containers/CurrentTetromino';
-import ActiveTetrominos from '../containers/ActiveTetrominos';
+import CurrentTetromino from '../containers/CurrentTetromino.js';
+import ActiveTetrominos from '../containers/ActiveTetrominos.js';
 import gameConstants from '../gameConstants.js';
 import style from '../styles/styles.css';
 
@@ -13,11 +13,11 @@ let GameField = ({ isPlaying, isPaused, isGameOver }) => {
   if (isPlaying) {
     return (
       <div style={{ display: 'inline' }}>
-        <div className={style.gameField}>
+        <div className="gameField">
           <Stage width={fieldWidth} height={fieldHeight}>
             <Layer>
               <CurrentTetromino />
-              <ActiveTetromino />
+              <ActiveTetrominos />
             </Layer>
           </Stage>
           {isPaused ? (

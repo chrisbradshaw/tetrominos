@@ -33,7 +33,6 @@ export const addTetromino = (currentTetromino, nextTetromino) => {
     nextRandomShape,
   };
 };
-
 export const startGame = () => {
   const { shapesMapping } = gameConstants;
   const currentRandomNumber = Math.floor(Math.random() * 7);
@@ -47,7 +46,6 @@ export const startGame = () => {
     nextRandomShape,
   };
 };
-
 export const pauseGame = () => ({
   type: PAUSE_GAME,
 });
@@ -63,35 +61,28 @@ export const changePauseState = () =>
       dispatch(pauseGame());
     }
   };
-
 export const gameOver = () => ({
   type: GAME_OVER,
 });
-
 export const addScore = clearedLines => ({
   type: ADD_SCORE,
   points: Math.pow(clearedLines, 2) * 100,
   clearedLines,
 });
-
-export const moveRight = () => {
-  type: MOVE_RIGHT;
-};
-
-export const moveLeft = () => {
-  type: MOVE_LEFT;
-};
-
-export const moveDown = () => {
-  type: MOVE_DOWN;
-};
-
+export const moveRight = () => ({
+  type: MOVE_RIGHT,
+});
+export const moveLeft = () => ({
+  type: MOVE_LEFT,
+});
+export const moveDown = () => ({
+  type: MOVE_DOWN,
+});
 export const rotateRight = rotatedTetromino => ({
   type: ROTATE_TETROMINO,
   rotatedTetromino,
 });
-
-export const rotateTetromino = () => ({
+export const rotateTetromino = () =>
   function(dispatch, getState) {
     const { activeTetrominos, currentTetromino, gameStatus } = getState();
     const rotatedTetromino = Object.assign({}, currentTetromino);
@@ -102,9 +93,7 @@ export const rotateTetromino = () => ({
     ) {
       dispatch(rotateRight(rotatedTetromino.shape));
     }
-  },
-});
-
+  };
 export const moveTetromino = direction =>
   function(dispatch, getState) {
     const {
@@ -152,8 +141,7 @@ export const moveTetromino = direction =>
         return;
     }
   };
-
-export const loadMenu = () => ({
+export const loadMenu = () =>
   function(dispatch) {
     function handleSpaceBar(e) {
       if (e.keyCode === 32) {
@@ -162,9 +150,7 @@ export const loadMenu = () => ({
       }
     }
     window.addEventListener('keyup', handleSpaceBar);
-  },
-});
-
+  };
 export const loadGame = () =>
   function(dispatch, getState) {
     dispatch(startGame());

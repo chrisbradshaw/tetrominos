@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Rect, Group } from 'react-konva';
 import gameConstants from '../gameConstants.js';
 
@@ -39,7 +40,6 @@ const Tetromino = ({ shape, offsetX, offsetY, color }) => {
   const coordinates = getCoordinates(shape);
   const xs = coordinates.map(coord => coord.x * blockUnit + offsetX);
   const ys = coordinates.map(coord => coord.y * blockUnit + offsetY);
-
   return <Group>{tetrominoGroup(xs, ys, color)}</Group>;
 };
 

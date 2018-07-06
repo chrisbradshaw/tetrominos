@@ -6,9 +6,9 @@ body {
 }
 
 .pageBanner {
-  margin-top: 50px;
-  font-size: 60px;
-  letter-spacing: 40px;
+  margin-top: 10px;
+  font-size: 30px;
+  letter-spacing: 20px;
 }
 
 .menuButton {
@@ -44,7 +44,7 @@ body {
   width: 300;
   height: 660;
   display: inline-block;
-  background-color: #cfd8dc;
+  background-color: #5bd7d5;
   position: relative;
 }
 

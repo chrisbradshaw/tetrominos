@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Tetromino from '../components/Tetromino';
+import Tetromino from '../components/Tetromino.js';
 
 const mapStateToProps = ({ currentTetromino }) => ({
   shape: currentTetromino.shape,

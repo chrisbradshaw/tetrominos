@@ -6,11 +6,8 @@ function occupied(grid, x, y) {
 
 export function getActualCoordinates(newTetromino) {
   const coordinates = [];
-
   const { shape, offsetX, offsetY } = newTetromino;
-
   const { blockUnit } = gameConstants;
-
   for (let i = 0; i < shape.length; i++) {
     for (let j = 0; j < shape[i].length; j++) {
       if (shape[i][j]) {
@@ -23,7 +20,6 @@ export function getActualCoordinates(newTetromino) {
   }
   return coordinates;
 }
-
 export function getNewColoredGrid(grid, tetromino, color) {
   const gridCopy = grid.map(x => [...x]);
   const coords = getActualCoordinates(tetromino);
@@ -33,7 +29,6 @@ export function getNewColoredGrid(grid, tetromino, color) {
   }
   return gridCopy;
 }
-
 export function getCompletedLines(grid, tetromino) {
   const linesToClear = [];
   const gridCopy = getNewColoredGrid(grid, tetromino, 'tmp');
@@ -59,7 +54,6 @@ export function getCompletedLines(grid, tetromino) {
 export function getNewClearedGrid(grid, tetromino, color) {
   const linesToClear = getCompletedLines(grid, tetromino);
   const gridCopy = getNewColoredGrid(grid, tetromino, color);
-
   for (const row of linesToClear) {
     for (let j = 0; j < 10; j++) {
       gridCopy[j][row] = 'grey';
@@ -73,7 +67,6 @@ export function getNewClearedGrid(grid, tetromino, color) {
   }
   return gridCopy;
 }
-
 export function rotateArray(tetromino) {
   const matrix = tetromino.shape;
   const n = matrix.length;

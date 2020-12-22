@@ -8,7 +8,7 @@
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.4.2",
     "react-konva": "^1.7.9",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
